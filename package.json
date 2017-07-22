@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Aurelia custom elements for conditional DOM construction",
   "author": "George Thomas",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "dist/commonjs/index.js",
   "typings": "dist/commonjs/index.d.ts",
   "scripts": {
