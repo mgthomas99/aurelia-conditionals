@@ -1,0 +1,6 @@
+.nyc_output/
+.vscode/
+src/
+.editorconfig
+.gitignore
+tsconfig.json

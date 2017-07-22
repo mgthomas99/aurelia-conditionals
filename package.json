@@ -1,0 +1,59 @@
+{
+  "name": "aurelia-conditionals",
+  "version": "1.0.0",
+  "description": "Aurelia custom elements for conditional DOM construction",
+  "author": "George Thomas",
+  "license": "UNLICENSED",
+  "main": "dist/commonjs/index.js",
+  "typings": "dist/commonjs/index.d.ts",
+  "scripts": {
+    "build:html:amd": "copyfiles -u 1 src/**/*.html dist/amd",
+    "build:html:commonjs": "copyfiles -u 1 src/**/*.html dist/commonjs",
+    "build:html:es2015": "copyfiles -u 1 src/**/*.html dist/es2015",
+    "build:source:amd": "tsc --project tsconfig.json --module amd --outDir dist/amd/",
+    "build:source:commonjs": "tsc --project tsconfig.json --module commonjs --outDir dist/commonjs/",
+    "build:source:es2015": "tsc --project tsconfig.json --module es2015 --outDir dist/es2015/",
+    "build:html": "concurrently \"npm run build:html:amd\" \"npm run build:html:commonjs\" \"npm run build:html:es2015\"",
+    "build:source": "concurrently \"npm run build:source:amd\" \"npm run build:source:commonjs\" \"npm run build:source:es2015\"",
+    "build": "concurrently \"npm run build:html \" \"npm run build:source\"",
+    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "keywords": [
+    "aurelia",
+    "conditional",
+    "dom",
+    "element",
+    "else",
+    "if"
+  ],
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.14",
+    "chai": "^4.1.0",
+    "concurrently": "^3.5.0",
+    "copyfiles": "^1.2.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "reflect-metadata": "^0.1.10",
+    "ts-node": "^3.2.1",
+    "tslib": "^1.7.1",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "aurelia-framework": "^1.1.4",
+    "aurelia-pal": "^1.3.0",
+    "aurelia-polyfills": "^1.2.2",
+    "aurelia-templating": "^1.4.2"
+  },
+  "nyc": {
+    "include": [ "src/**/*.ts" ],
+    "extension": [ ".ts" ],
+    "compilers": [ "ts:ts-node/register" ],
+    "require": [ "ts-node/register" ]
+  }
+}
