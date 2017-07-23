@@ -1,4 +1,4 @@
-# aurelia-conditionals
+# [aurelia-conditionals](https://www.npmjs.com/package/aurelia-conditionals)
 Aurelia custom elements for conditional DOM construction.
 
 Currently, Aurelia features a `show.bind` property that can be added to
