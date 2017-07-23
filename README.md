@@ -2,7 +2,7 @@
 [![npm][npm-shield-url]][npm-package-url]
 [![npm][license-shield-url]][license-url]
 [![CircleCI][circleci-shield-url]][circleci-url]
-[![codecov](https://codecov.io/gh/mgthomas99/aurelia-conditionals/branch/master/graph/badge.svg)](https://codecov.io/gh/mgthomas99/aurelia-conditionals)
+[![codecov][codecov-shield-url]][codecov-url]
 
 Aurelia custom elements for conditional DOM construction.
 
