@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": " "
+    "url": "git+https://github.com/mgthomas99/aurelia-conditionals.git"
   },
   "keywords": [
     "aurelia",
@@ -51,9 +51,21 @@
     "aurelia-templating": "^1.4.2"
   },
   "nyc": {
-    "include": [ "src/**/*.ts" ],
-    "extension": [ ".ts" ],
-    "compilers": [ "ts:ts-node/register" ],
-    "require": [ "ts-node/register" ]
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "compilers": [
+      "ts:ts-node/register"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "lcov"
+    ]
   }
 }
