@@ -21,11 +21,14 @@ The advantage of using the `<conditional-if>` element over using
 twice.
 
 ## Usage
-### Aurelia CLI
 `npm install aurelia-conditionals --save`
 
-Then, in your `aurelia_project/aurelia.json` file, add the following
-to your dependencies table:
+Then, in `src/main#configure()`, add the following line:
+
+`aurelia.use.plugin("aurelia-conditionals");`
+
+If you are using the Aurelia CLI, add the following to
+your `aurelia_project/aurelia.json` dependencies table:
 ```
 {
     "name": "aurelia-conditionals",
