@@ -1,4 +1,9 @@
 # [aurelia-conditionals](https://www.npmjs.com/package/aurelia-conditionals)
+[![npm][npm-shield-url]][npm-package-url]
+[![npm][license-shield-url]][license-url]
+[![CircleCI][circleci-shield-url]][circleci-url]
+[![codecov](https://codecov.io/gh/mgthomas99/aurelia-conditionals/branch/master/graph/badge.svg)](https://codecov.io/gh/mgthomas99/aurelia-conditionals)
+
 Aurelia custom elements for conditional DOM construction.
 
 Currently, Aurelia features a `show.bind` property that can be added to
@@ -63,3 +68,12 @@ your `aurelia_project/aurelia.json` dependencies table:
 
 The project will be built for `commonjs` and `es2015`, and `amd` for
 Aurelia CLI project compatibility.
+
+[circleci-url]: https://circleci.com/gh/mgthomas99/aurelia-conditionals
+[circleci-shield-url]: https://img.shields.io/circleci/project/github/mgthomas99/aurelia-conditionals.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/mgthomas99/aurelia-conditionals
+[codecov-shield-url]: https://img.shields.io/codecov/c/github/mgthomas99/aurelia-conditionals.svg?style=flat-square
+[license-url]: https://github.com/mgthomas99/aurelia-conditionals/blob/master/LICENSE
+[license-shield-url]: https://img.shields.io/github/license/mgthomas99/aurelia-conditionals.svg?style=flat-square
+[npm-package-url]: https://www.npmjs.com/package/aurelia-conditionals
+[npm-shield-url]: http://img.shields.io/npm/v/aurelia-conditionals.svg?style=flat-square
