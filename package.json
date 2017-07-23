@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "Aurelia custom elements for conditional DOM construction",
   "author": "George Thomas",
+  "homepage": "https://github.com/mgthomas99/aurelia-conditionals/blob/master/README.md",
   "license": "MIT",
   "main": "dist/commonjs/index.js",
   "typings": "dist/commonjs/index.d.ts",
@@ -16,11 +17,8 @@
     "build:html": "concurrently \"npm run build:html:amd\" \"npm run build:html:commonjs\" \"npm run build:html:es2015\"",
     "build:source": "concurrently \"npm run build:source:amd\" \"npm run build:source:commonjs\" \"npm run build:source:es2015\"",
     "build": "concurrently \"npm run build:html \" \"npm run build:source\"",
-    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mgthomas99/aurelia-conditionals.git"
+    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.ts",
+    "posttest": "nyc report && codecov -f coverage/*.json -t 2102d4bb-387c-4340-b588-bccc13dd2d16"
   },
   "keywords": [
     "aurelia",
@@ -30,16 +28,25 @@
     "else",
     "if"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgthomas99/aurelia-conditionals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mgthomas99/aurelia-conditionals/issues"
+  },
   "devDependencies": {
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.14",
     "chai": "^4.1.0",
+    "codecov": "^2.2.0",
     "concurrently": "^3.5.0",
     "copyfiles": "^1.2.0",
     "mocha": "^3.4.2",
     "nyc": "^11.0.3",
     "reflect-metadata": "^0.1.10",
+    "source-map-support": "^0.4.15",
     "ts-node": "^3.2.1",
     "tslib": "^1.7.1",
     "typescript": "^2.4.2"
@@ -65,6 +72,7 @@
     ],
     "reporter": [
       "html",
+      "json",
       "lcov"
     ]
   }
