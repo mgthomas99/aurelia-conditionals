@@ -1,26 +1,45 @@
 # aurelia-conditionals
 Aurelia custom elements for conditional DOM construction.
-Currently, the plugin adds a custom element which acts as a conditional
-`if` statement, which binds to an expression and displays the appropriate
-data.
+
+Currently, Aurelia features a `show.bind` property that can be added to
+HTML elements to conditionally decide whether an element should be
+visible. For example, `<div show.bind="name === 'admin'></div>` would
+create a HTML `div` element that is only visible when the `name` variable
+is equal to `"admin"`.
+
+However, Aurelia does not offer `else` syntax, meaning you will have to
+write *two* `<div>` elements, each with their own `show.bind` properties,
+where one negates the expression's result. This causes the expression to
+be evaluated twice.
 
 ```
-<conditional-if expression.bind="user.administrator">
+<div show.bind="name === 'admin'">
+    You are an administrator!
+</div>
+<div show.bind="name !== 'admin'">
+    You are not an administrator.
+</div>
+```
+
+The `aurelia-conditionals` plugin solves this problem by providing a
+`<conditional-if>` custom element, which utilises native HTML `<slot>`
+elements to conditionally display data.
+
+```
+<conditional-if expression.bind="name === 'admin'">
     <div slot="true">
         You are an administrator!
     </div>
     <div slot="false">
-        <!-- Not an administrator. -->
-        Welcome back, ${user.name}!
+        You are not an administrator.
     </div>
 </conditional-if>
 ```
 
-The advantage of using the `<conditional-if>` element over using
-`show.bind="expression"` is that you do not have to write the expression
-twice.
+The advantage of the `<conditional-if>` is that the expression is
+evaluated only once, and only needs to be written once.
 
-## Usage
+## Install and Usage
 `npm install aurelia-conditionals --save`
 
 Then, in `src/main#configure()`, add the following line:
