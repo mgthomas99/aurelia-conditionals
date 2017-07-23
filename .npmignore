@@ -1,6 +1,9 @@
+.circleci/
 .nyc_output/
 .vscode/
+coverage/
 src/
 .editorconfig
 .gitignore
+circle.yml
 tsconfig.json
