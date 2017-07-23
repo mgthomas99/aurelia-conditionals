@@ -1,5 +1,24 @@
 # aurelia-conditionals
 Aurelia custom elements for conditional DOM construction.
+Currently, the plugin adds a custom element which acts as a conditional
+`if` statement, which binds to an expression and displays the appropriate
+data.
+
+```
+<conditional-if expression.bind="user.administrator">
+    <div slot="true">
+        You are an administrator!
+    </div>
+    <div slot="false">
+        <!-- Not an administrator. -->
+        Welcome back, ${user.name}!
+    </div>
+</conditional-if>
+```
+
+The advantage of using the `<conditional-if>` element over using
+`show.bind="expression"` is that you do not have to write the expression
+twice.
 
 ## Usage
 ### Aurelia CLI
