@@ -58,9 +58,6 @@
     "aurelia-templating": "^1.4.2"
   },
   "nyc": {
-    "include": [
-      "src/**/*.ts"
-    ],
     "extension": [
       ".ts"
     ],
