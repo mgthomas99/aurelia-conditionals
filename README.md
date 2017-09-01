@@ -27,7 +27,7 @@ write *two* `<div>` elements, each with their own `show.bind` properties,
 where one negates the expression's result. This causes the expression to
 be evaluated twice.
 
-```
+```html
 <div show.bind="name === 'admin'">
     You are an administrator!
 </div>
@@ -40,7 +40,7 @@ The `aurelia-conditionals` plugin solves this problem by providing a
 `<conditional-if>` custom element, which utilises native HTML `<slot>`
 elements to conditionally display data.
 
-```
+```html
 <conditional-if expression.bind="name === 'admin'">
     <div slot="true">
         You are an administrator!
@@ -63,7 +63,7 @@ Then, in `src/main#configure()`, add the following line:
 
 If you are using the Aurelia CLI, add the following to
 your `aurelia_project/aurelia.json` dependencies table:
-```
+```json
 {
     "name": "aurelia-conditionals",
     "path": "../node_modules/aurelia-conditionals/dist/amd",
