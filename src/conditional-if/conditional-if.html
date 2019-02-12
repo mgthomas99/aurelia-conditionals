@@ -1,11 +1,11 @@
 <template bindable="expression">
-    <div class="aurelia-conditional-if">
-        <div show.bind="expression">
-            <slot name="true"></slot>
-            <slot></slot>
-        </div>
-        <div show.bind="!expression">
-            <slot name="false"></slot>
-        </div>
+  <div class="aurelia-conditional-if">
+    <div show.bind="expression">
+      <slot name="true"></slot>
+      <slot></slot>
     </div>
+    <div show.bind="!expression">
+      <slot name="false"></slot>
+    </div>
+  </div>
 </template>
