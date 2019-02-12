@@ -2,9 +2,7 @@
   "name": "aurelia-conditionals",
   "version": "1.1.4",
   "description": "Aurelia custom elements for conditional DOM construction",
-  "author": "George Thomas",
   "homepage": "https://github.com/mgthomas99/aurelia-conditionals/blob/master/README.md",
-  "license": "MIT",
   "main": "dist/commonjs/index.js",
   "typings": "dist/commonjs/index.d.ts",
   "scripts": {
@@ -57,6 +55,11 @@
     "aurelia-polyfills": "^1.2.2",
     "aurelia-templating": "^1.4.2"
   },
+  "author": {
+    "name": "George Thomas",
+    "url": "https://mgthomas99.github.io"
+  },
+  "license": "MIT",
   "nyc": {
     "extension": [
       ".ts"
